@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>DBMS MINI Project</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <nav class="light-blue lighten-1" role="navigation">
+    <div onclick="btnlogout_onclick()" class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">QueBank</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Logout</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav" onclick="btnlogout_onclick()">
+        <li><a href="#">Logout</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  <div class="section no-pad-bot bground-img" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center orange-text">Admin Panel</h1>
+  <br><br>
+<center>
+  <a href="http://www.skylinelabs.in/Database/addq.html" class="waves-effect waves-light btn">Add Questions</a>
+  &nbsp;&nbsp;&nbsp;
+  <a href="http://www.skylinelabs.in/Database/add_users.html" class="waves-effect waves-light btn">Add Users</a>
+	</center>  
+	  
+      <br><br>
+      <br><br>
+      <br><br>
+      <br><br>
+
+    </div>
+  </div>
+
+
+
+  <footer class="page-footer orange">
+    
+    <div class="footer-copyright">
+      <div class="container">
+      Made for <a class="orange-text text-lighten-3" href="http://materializecss.com">Dbms</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="../../bin/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
+
+
+<script language="javascript" type="text/javascript">
+
+
+
+function btnlogout_onclick() 
+{
+delete_cookie('authorization');
+window.location.assign("http://www.skylinelabs.in/Database");
+}
+
+
+var delete_cookie = function(name) {
+    document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+};
+</script>
+
